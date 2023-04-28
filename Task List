@@ -1,0 +1,37 @@
+#Add Google and Ubuntu SSO accounts
+#Add NAS, Router-USB to Files app
+
+# Update software packages list
+sudo apt update
+# Upgrade software packages
+sudo apt upgrade
+# Upgrade software packages with some dependency conflict resolution 
+sudo apt full-upgrade
+
+# Installs Timeshift
+sudo apt install -y timeshift
+# Next, run Timeshift GUI and setup scheduled and/or on-demand backups. Create an initial backup.
+
+# Install Flatpak and GNOME Software "Store"
+sudo apt install -y gnome-software gnome-software-plugin-flatpak flatpak
+# Add Flatpak repo
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+# Install GNOME's extension manager
+sudo apt install gnome-shell-extension-manager
+# Install and configure GNOME extensions: OpenWeather, Power Profile Switcher
+
+
+flatpak install com.microsoft.Edge
+# Add Edge Apps: iCloud, Heimdall
+
+#Enable minimize on click
+gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
+
+#
+# BACKUP via Timeshift
+#
+
+sudo apt install -y htop neofetch
+
+# Install via GNOME Software (Flatpak): Discord
