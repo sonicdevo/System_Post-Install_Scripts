@@ -1,6 +1,4 @@
 # For Ubuntu Desktop 23.04
-# Link Google and Ubuntu SSO accounts
-# Add Network Shares to Files app [NAS, Router-USB]
 
 # Update and upgrade: https://askubuntu.com/questions/733434/one-single-command-to-update-everything-in-ubuntu
 sudo apt update -y && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt clean -y && sudo apt autoclean -y
@@ -14,13 +12,19 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 #Enable minimize on click
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 
-# Install and configure GNOME extensions: OpenWeather, Power Profile Switcher, Hibernate Status Button
-# Settings > Mouse and Touchpad > Natural Scrolling direction
-
 # Install flatpak applications: Edge, Discord
 flatpak install -y com.microsoft.Edge  && flatpak install -y com.discordapp.Discord
-# Add Edge Apps: iCloud, Heimdall
+
+# Install and configure GNOME extensions: OpenWeather, Power Profile Switcher, Hibernate Status Button
+# Settings > Mouse and Touchpad > Natural Scrolling direction
+# Settings > Display > Scaling: ?%
+# Sign-in to: Discord, Edge, Bitwarden, iCloud (webapp)
+# Link Google account in Settings app
+# Add Network Shares to Files app [NAS, Router-USB]
+# Add Edge Apps: iCloud
 
 #
-# Next, run Timeshift GUI and setup scheduled and/or on-demand backups. Create an initial backup.
+# Next, run Timeshift GUI and setup scheduled and/or on-demand rsync backups. Create an initial backup.
 #
+
+#Customize 
