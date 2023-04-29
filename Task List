@@ -1,4 +1,5 @@
 # For Ubuntu Desktop 23.04
+# Found @ https://tinyurl.com/sonicdevo-upi
 
 # Update and upgrade: https://askubuntu.com/questions/733434/one-single-command-to-update-everything-in-ubuntu
 sudo apt update -y && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt clean -y && sudo apt autoclean -y
