@@ -5,30 +5,22 @@
 # Update and upgrade: https://askubuntu.com/questions/733434/one-single-command-to-update-everything-in-ubuntu
 sudo apt update -y && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt clean -y && sudo apt autoclean -y
 
-# Installs Timeshift
-sudo apt install -y timeshift
-# Next, run Timeshift GUI and setup scheduled and/or on-demand backups. Create an initial backup.
+# Installs via APT: Timeshift, GNOME's extension manager, GNOME Tweaks, Flatpak and GNOME Software "Store," htop, and neofetch
+sudo apt install -y timeshift gnome-shell-extension-manager gnome-tweaks gnome-software gnome-software-plugin-flatpak flatpak htop neofetch
 
-# Install Flatpak and GNOME Software "Store"
-sudo apt install -y gnome-software gnome-software-plugin-flatpak flatpak
 # Add Flatpak repo
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
-# Install GNOME's extension manager
-sudo apt install gnome-shell-extension-manager
-# Install and configure GNOME extensions: OpenWeather, Power Profile Switcher
-
-
-flatpak install com.microsoft.Edge
-# Add Edge Apps: iCloud, Heimdall
 
 #Enable minimize on click
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 
-#
-# BACKUP via Timeshift
-#
+# Install and configure GNOME extensions: OpenWeather, Power Profile Switcher, Hibernate Status Button
+# Settings > Mouse and Touchpad > Natural Scrolling direction
 
-sudo apt install -y htop neofetch
+# Install flatpak applications: Edge, Discord
+flatpak install -y com.microsoft.Edge  && flatpak install -y com.discordapp.Discord
+# Add Edge Apps: iCloud, Heimdall
 
-# Install via GNOME Software (Flatpak): Discord
+#
+# Next, run Timeshift GUI and setup scheduled and/or on-demand backups. Create an initial backup.
+#
