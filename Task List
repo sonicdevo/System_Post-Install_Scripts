@@ -1,12 +1,9 @@
-#Add Google and Ubuntu SSO accounts
-#Add NAS, Router-USB to Files app
+# For Ubuntu Desktop 23.04
+# Link Google and Ubuntu SSO accounts
+# Add Network Shares to Files app [NAS, Router-USB]
 
-# Update software packages list
-sudo apt update
-# Upgrade software packages
-sudo apt upgrade
-# Upgrade software packages with some dependency conflict resolution 
-sudo apt full-upgrade
+# Update and upgrade: https://askubuntu.com/questions/733434/one-single-command-to-update-everything-in-ubuntu
+sudo apt update -y && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt clean -y && sudo apt autoclean -y
 
 # Installs Timeshift
 sudo apt install -y timeshift
